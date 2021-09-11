@@ -10,4 +10,7 @@ app.get("/",(req,res) =>
 app.get("/app1",(req,res) => 
  res.send(`APPID: ${APPID} app1's page.`));
 
+app.get("/app2",(req,res) => 
+ res.send(`APPID: ${APPID} app2's page.`)); 
+
 app.listen(APPID,() => console.log(`${APPID} is listening on port ${APPID}...`));
