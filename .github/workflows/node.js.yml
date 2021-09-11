@@ -17,6 +17,7 @@ jobs:
           script: |
             cd testActionsDockerCompose
             git pull origin
+            docker build -t chenxyzj/exp2loadbalancer .
             docker-compose down
             docker-compose up -d
 
