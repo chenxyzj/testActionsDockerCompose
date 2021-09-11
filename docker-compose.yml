@@ -1,0 +1,25 @@
+version : '3'
+
+services:
+    lb:
+        image: haproxy
+        ports:
+            - "8080:8080"
+        volumes: 
+            - ./haproxy:/usr/local/etc/haproxy
+    app1:
+        image: chenxyzj/exp2loadbalancer
+        environment:
+            - APPID=1111
+    app2:
+        image: chenxyzj/exp2loadbalancer
+        environment:
+            - APPID=2222        
+    app3:        
+        image: chenxyzj/exp2loadbalancer
+        environment:
+            - APPID=3333
+    app4:        
+        image: chenxyzj/exp2loadbalancer
+        environment:
+            - APPID=4444
